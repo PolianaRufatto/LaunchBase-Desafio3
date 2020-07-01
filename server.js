@@ -1,5 +1,6 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
+const courses = require("./data");
 
 const server = express();
 
@@ -12,11 +13,32 @@ nunjucks.configure("views", {
 });
 
 server.get("/", function(req, res) {
-    return res.render('about');
+    const about = {
+        avatar_url: "https://pbs.twimg.com/profile_images/1271517147349626881/Mf1UjRa0.jpg",
+        name: "Rocketseat",
+        description: "As melhores tecnologias em programação, direto ao ponto e do jeito certo.",
+        links: [
+            {
+                name: "Github",
+                url: "https://github.com/Rocketseat"
+            },
+            {
+                name: "Instagram",
+                url: "https://www.instagram.com/rocketseat_oficial/"
+            },
+            {
+                name: "Facebook",
+                url: "https://www.facebook.com/rocketseat"
+            },
+
+        ]
+    }
+
+    return res.render('about', {about});
 });
 
 server.get("/courses", function(req, res) {
-    return res.render('courses');
+    return res.render('courses', { items: courses});
 });
 
 server.use(function(req, res) {

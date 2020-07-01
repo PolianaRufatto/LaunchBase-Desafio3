@@ -79,6 +79,7 @@ header {
 .card {
     background-color:rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    display: grid;
 }
 
 #starter .card__image-container img {
@@ -120,6 +121,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-weight: 100;
+    align-items: center;
 }
 
 #starter .card__info {
