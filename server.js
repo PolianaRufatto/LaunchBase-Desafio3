@@ -17,6 +17,7 @@ server.get("/", function(req, res) {
         avatar_url: "https://pbs.twimg.com/profile_images/1271517147349626881/Mf1UjRa0.jpg",
         name: "Rocketseat",
         description: "As melhores tecnologias em programação, direto ao ponto e do jeito certo.",
+        description2: "No meio de tanta informação e da quantidade de ferramentas que surgem todos os dias, você precisa de alguém que te leve na direção certa.",
         links: [
             {
                 name: "Github",
@@ -39,6 +40,20 @@ server.get("/", function(req, res) {
 
 server.get("/courses", function(req, res) {
     return res.render('courses', { items: courses});
+});
+
+server.get("/courses/:id", function(req, res) {
+    const id = req.params.id;
+
+    const course = courses.find(function (course) {
+        return course.id === id;
+    });
+
+    if (!course) {
+        return res.status(404).render("not-found");
+    }
+
+    return res.render('course', {item: course});
 });
 
 server.use(function(req, res) {

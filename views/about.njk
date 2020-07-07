@@ -7,14 +7,15 @@
     {% block content %}
         <div class="wrapper">
             <img src="{{about.avatar_url}}" alt="Logo de {{about.name}}">
-            <h1>{{about.aname}}</h1>
+            <h1>{{about.name}}</h1>
             <h2>{{about.description}}</h2>
-            <ul>
+            <h3>{{about.description2}}</h3>
+            {# <ul>
                 <li>Javascript</li>
                 <li>NodeJS</li>
                 <li>ReactJS</li>
                 <li>React Native</li>
-            </ul>
+            </ul> #}
         </div>
         <div id="links-footer" class="links">
             {% for link in about.links %}

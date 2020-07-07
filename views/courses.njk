@@ -14,12 +14,12 @@
             {% for item in items %}
             <div class="card" id="{{item.id}}">
                 <div class="card__image-container">
-                    <img src="https://skylab.rocketseat.com.br/static/{{item.id_image}}.svg" alt="Imagem do curso {{item.id}}">
+                    <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/{{item.id}}.svg" alt="Imagem do curso {{item.id}}">
                 </div>
                 <div class="card__content">
                     <p>
-                        <strong>{{item.description}}</strong>
-                        {{item.description2}}
+                        <strong>{{item.title}}</strong>
+                        {{item.description}}
                     </p>
                 </div>
                 <div class="card__info">

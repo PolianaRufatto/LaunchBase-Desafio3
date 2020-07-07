@@ -53,10 +53,21 @@ header {
 }
 
 .wrapper h2 {
-    font-size: 20px;
+    margin:0 auto;
+    font-size: 25px;
     line-height: 30px;
     font-weight: normal;
     margin-top: 8px;
+    max-width: 600px;
+}
+
+.wrapper h3 {
+    margin:0 auto;
+    max-width: 750px;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    opacity: 0.6;
 }
 
 .wrapper ul li {
@@ -203,3 +214,13 @@ iframe {
     color: white;
     text-decoration: none;
 }
+
+.course {
+    max-height: 800px;
+    height: 100%;
+}
+  
+.course iframe {
+    margin-top: 8vh; 
+    background-color: white;
+} 
